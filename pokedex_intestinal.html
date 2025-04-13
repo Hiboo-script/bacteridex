@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex Bactérien</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 50px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #e0e0e0;
+    }
+    .rarity {
+      font-weight: bold;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+    .commun { background-color: #8bc34a; }
+    .rare { background-color: #03a9f4; }
+    .tres-rare { background-color: #9c27b0; }
+    .exotique { background-color: #ff9800; }
+    .introuvable { background-color: #f44336; }
+    .legendaire { background-color: #ffc107; color: black; }
+    img {
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bactéridex première génération</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Bactérie</th>
+        <th>Description</th>
+        <th>Rareté</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img src="sprites/Escherichia_coli.png" alt="Bidoof"></td>
+        <td><i>Escherichia coli</i></td>
+        <td>Bactérie intestinale fréquente, certaines souches pathogènes.</td>
+        <td><span class="rarity commun">Commun</span></td>
+      </tr>
+
+      <tr>
+        <td><img src="sprites/Clostridium_perfringens.png" alt="Stunky"></td>
+        <td><i>Clostridium perfringens</i></td>
+        <td>Cause fréquente d’intoxications alimentaires.</td>
+        <td><span class="rarity commun">Commun</span></td>
+      </tr>
+
+      <tr>
+        <td><img src="sprites/Salmonella_enterica.png" alt="Salmonella enterica"></td>
+        <td><i>Salmonella enterica</i></td>
+        <td>Très fréquente, responsable d'intoxications via œufs, viandes ou lait crus.</td>
+        <td><span class="rarity commun">Commun</span></td>
+      </tr>
+
+      <tr>
+        <td><img src="sprites/Salmonella_typhi.png" alt="Salmonella typhi"></td>
+        <td><i>Salmonella typhi</i></td>
+        <td>Évolution redoutable de <i>S. enterica</i>, responsable de la fièvre typhoïde. S'attrape via de l'eau contaminée.</td>
+        <td><span class="rarity rare">Rare</span></td>
+      </tr>
+            
+      <tr>
+        <td><img src="sprites/Bacteroides_fragilis.png" alt="Bacteroides fragilis"></td>
+        <td><i>Bacteroides fragilis</i></td>
+        <td>Habituée du microbiote, peut causer des abcès en cas de migration.</td>
+        <td><span class="rarity commun">Commun</span></td>
+      </tr>
+
+      <tr>
+        <td><img src="sprites/Enterococcus_faecalis.png" alt="Enterococcus faecalis"></td>
+        <td><i>Enterococcus faecalis</i></td>
+        <td>Microbe intestinal opportuniste, parfois infectieux en hôpital.</td>
+        <td><span class="rarity commun">Commun</span></td>
+      </tr>
+
+      <tr>
+        <td><img src="sprites/Klebsiella_pneumoniae.png" alt="Klebsiella pneumoniae"></td>
+        <td><i>Klebsiella pneumoniae</i></td>
+        <td>Commensale mais redoutable si elle se propage hors de l’intestin.</td>
+        <td><span class="rarity commun">Commun</span></td>
+      </tr>
+
+      <tr>
+        <td><img src="sprites/Proteus_mirabilis.png" alt="Proteus mirabilis"></td>
+        <td><i>Proteus mirabilis</i></td>
+        <td>Connue pour ses infections urinaires et son odeur ammoniacale.</td>
+        <td><span class="rarity commun">Commun</span></td>
+      </tr>
+
+      <tr>
+        <td><img src="sprites/Citrobacter_freundii.png" alt="Citrobacter freundii"></td>
+        <td><i>Citrobacter freundii</i></td>
+        <td>Rarement pathogène, sauf chez les personnes fragiles.</td>
+        <td><span class="rarity commun">Commun</span></td>
+      </tr>
+      
+      <tr>
+        <td><img src="sprites/Shigella_sonnei.png" alt="Shigella sonnei"></td>
+        <td><i>Shigella sonnei</i></td>
+        <td>Provoque des diarrhées sévères, très contagieuse.</td>
+        <td><span class="rarity rare">Rare</span></td>
+      </tr>
+
+      <tr>
+        <td><img src="sprites/Campylobacter_jejuni.png" alt="Campylobacter jejuni"></td>
+        <td><i>Campylobacter jejuni</i></td>
+        <td>Souvent liée à la volaille mal cuite, provoque une diarrhée intense.</td>
+        <td><span class="rarity rare">Rare</span></td>
+      </tr>
+
+      <tr>
+        <td><img src="sprites/Yersinia_enterocolitica.png" alt="Yersinia enterocolitica"></td>
+        <td><i>Yersinia enterocolitica</i></td>
+        <td>Peut imiter une appendicite. Transmise via le porc.</td>
+        <td><span class="rarity rare">Rare</span></td>
+      </tr>
+
+      <tr>
+        <td><img src="sprites/Morganella_morganii.png" alt="Morganella morganii"></td>
+        <td><i>Morganella morganii</i></td>
+        <td>Opportuniste rare, surtout en milieu hospitalier.</td>
+        <td><span class="rarity rare">Rare</span></td>
+      </tr>
+
+      <tr>
+        <td><img src="sprites/Plesiomonas_shigelloides.png" alt="Plesiomonas shigelloides"></td>
+        <td><i>Plesiomonas shigelloides</i></td>
+        <td>Transmise par les fruits de mer ou l’eau douce contaminée.</td>
+        <td><span class="rarity rare">Rare</span></td>
+      </tr>
+      
+      <tr>
+        <td><img src="sprites/Clostridioides_difficile.png" alt="Clostridioides difficile"></td>
+        <td><i>Clostridioides difficile</i></td>
+        <td>Cause de colites sévères après antibiotiques. Très tenace.</td>
+        <td><span class="rarity tres-rare">Très rare</span></td>
+      </tr>
+
+      <tr>
+        <td><img src="sprites/E_coli_O157_H7.png" alt="E. coli O157:H7"></td>
+        <td><i>E. coli O157:H7</i></td>
+        <td>Souche virulente d’E. coli. Peut entraîner une insuffisance rénale.</td>
+        <td><span class="rarity tres-rare">Très rare</span></td>
+      </tr>
+
+      <tr>
+        <td><img src="sprites/Vibrio_parahaemolyticus.png" alt="Vibrio parahaemolyticus"></td>
+        <td><i>Vibrio parahaemolyticus</i></td>
+        <td>Contamine les fruits de mer. Gastro parfois violente.</td>
+        <td><span class="rarity tres-rare">Très rare</span></td>
+      </tr>
+
+      <tr>
+        <td><img src="sprites/Edwardsiella_tarda.png" alt="Edwardsiella tarda"></td>
+        <td><i>Edwardsiella tarda</i></td>
+        <td>Rare, d’origine aquatique. Peut être très grave.</td>
+        <td><span class="rarity tres-rare">Très rare</span></td>
+      </tr>
+      
+      <tr>
+        <td><img src="sprites/Vibrio_cholerae.png" alt="Vibrio cholerae"></td>
+        <td><i>Vibrio cholerae</i></td>
+        <td>Agent du choléra. Diarrhée massive, déshydratation foudroyante.</td>
+        <td><span class="rarity exotique">Exotique</span></td>
+      </tr>
+
+      <tr>
+        <td><img src="sprites/Entamoeba_histolytica.png" alt="Entamoeba histolytica"></td>
+        <td><i>Entamoeba histolytica</i></td>
+        <td>Amibe tropicale. Diarrhées sanglantes sévères.</td>
+        <td><span class="rarity exotique">Exotique</span></td>
+      </tr>
+      
+      <tr>
+        <td><img src="sprites/Balantidium_coli.png" alt="Balantidium coli"></td>
+        <td><i>Balantidium coli</i></td>
+        <td>Parasite rare d’origine porcine. Très peu courant.</td>
+        <td><span class="rarity exotique">Exotique</span></td>
+      </tr>
+      
+      <tr>
+        <td><img src="sprites/Clostridium_botulinum.png" alt="Clostridium botulinum"></td>
+        <td><i>Clostridium botulinum</i></td>
+        <td>Producteur de la toxine la plus puissante connue. Botulisme.</td>
+        <td><span class="rarity legendaire">Légendaire</span></td>
+      </tr>
+      
+      
+      <!-- Tu peux dupliquer cette structure et remplacer les données pour ajouter d'autres bactéries -->
+    </tbody>
+  </table>
+</body>
+</html>
