@@ -3,49 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Pokédex Bactérien</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 50px;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: left;
-    }
-    th {
-      background-color: #e0e0e0;
-    }
-    .rarity {
-      font-weight: bold;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 8px;
-      display: inline-block;
-    }
-    .commun { background-color: #8bc34a; }
-    .rare { background-color: #03a9f4; }
-    .tres-rare { background-color: #9c27b0; }
-    .exotique { background-color: #ff9800; }
-    .introuvable { background-color: #f44336; }
-    .legendaire { background-color: #ffc107; color: black; }
-    img {
-      height: 50px;
-    }
-  </style>
 </head>
 <body>
   <h1>Bactéridex première génération</h1>
@@ -90,7 +49,7 @@
       <tr>
         <td><img src="sprites/Bacillus_cereus.png" alt="Bacillus cereus"></td>
         <td><i>Bacillus cereus</i></td>
-        <td>Cause des intoxications alimentaires, notamment via du riz mal réchauffé.</td>
+        <td>Thermorésistante, cause des intoxications alimentaires, notamment via du riz mal conservé.</td>
         <td><span class="rarity commun">Commun</span></td>
       </tr>
 
@@ -156,6 +115,13 @@
         <td>Peut imiter une appendicite. Transmise via le porc.</td>
         <td><span class="rarity rare">Rare</span></td>
       </tr>
+
+      <tr>
+        <td><img src="sprites/Enterococcus_faecium.png" alt="Enterococcus faecium"></td>
+        <td><i>Enterococcus faecium</i></td>
+        <td>Proche de <i>E. faecalis</i>, mais encore plus résistant et hospitalier.</td>
+        <td><span class="rarity rare">Rare</span></td>
+      </tr>      
 
       <tr>
         <td><img src="sprites/Staphylococcus_aureus.png" alt="Staphylococcus aureus"></td>
