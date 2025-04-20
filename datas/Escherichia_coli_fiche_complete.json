@@ -1,0 +1,92 @@
+{
+  "nom": "Escherichia coli",
+  "classification": {
+    "famille": "Enterobacteriaceae",
+    "genre": "Escherichia",
+    "espèce": "coli"
+  },
+  "description": "Bactérie intestinale fréquente, généralement commensale, mais certaines souches peuvent être pathogènes.",
+  "forme": "Bacille (bâtonnet)",
+  "gram": "Gram négatif",
+  "mobilité": "Flagellée (souvent mobile)",
+  "taille_microns": {
+    "longueur": "2.0 µm",
+    "largeur": "0.5 µm"
+  },
+  "reproduction": {
+    "mode": "Scissiparité (fission binaire)",
+    "temps_de_generation": "20 minutes (en conditions optimales)"
+  },
+  "conditions_de_vie": {
+    "température_optimum": "37°C",
+    "pH_optimum": "6.5 - 7.5",
+    "type_respiratoire": "Facultatif anaérobie"
+  },
+  "habitat": [
+    "Intestin humain (microbiote normal)",
+    "Intestin des animaux",
+    "Sol",
+    "Eau contaminée",
+    "Aliments"
+  ],
+  "transmission": [
+    "Voie fécale-orale",
+    "Aliments contaminés (viande crue, légumes)",
+    "Eau non potable",
+    "Contact direct ou mains sales"
+  ],
+  "résistance": {
+    "résistance_naturelle": [
+      "Acidité gastrique modérée",
+      "Stress osmotique"
+    ],
+    "résistance_acquise_possible": [
+      "Antibiotiques (souches résistantes)",
+      "Désinfectants (faible résistance)"
+    ]
+  },
+  "pathogénicité": {
+    "formes_non_pathogènes": "Présente dans le microbiote normal, bénéfique",
+    "formes_pathogènes": [
+      "ETEC (entérotoxinogène) — diarrhée du voyageur",
+      "EHEC (entérohémorragique, ex: O157:H7)",
+      "EPEC (entéropathogène)",
+      "UPEC (uropathogène — infections urinaires)",
+      "NMEC (méningites néonatales)"
+    ],
+    "mécanismes": [
+      "Adhésion aux cellules intestinales",
+      "Production de toxines (ex: toxine Shiga)",
+      "Formation de biofilm",
+      "Invasion de l'épithélium"
+    ]
+  },
+  "concurrence": {
+    "compétiteurs": [
+      "Bacteroides fragilis",
+      "Clostridium perfringens",
+      "Enterococcus faecalis",
+      "Klebsiella pneumoniae",
+      "Proteus mirabilis",
+      "Pseudomonas aeruginosa"
+    ],
+    "prédateurs": [
+      "Lactobacillus spp.",
+      "Bifidobacterium spp.",
+      "Bactériophages (phages)",
+      "Streptomyces spp.",
+      "Pseudomonas aeruginosa (toxines)"
+    ],
+    "cibles": [
+      "Shigella spp.",
+      "Salmonella enterica",
+      "Listeria monocytogenes",
+      "Autres E. coli"
+    ]
+  },
+  "utilisation_biotechnologique": [
+    "Modèle génétique en laboratoire",
+    "Production d'insuline recombinante",
+    "Synthèse de protéines par génie génétique"
+  ]
+}

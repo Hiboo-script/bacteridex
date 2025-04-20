@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Fiche Bactérienne Dynamique</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .tag {
+      display: inline-block;
+      background-color: #03a9f4;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 10px;
+      font-size: 0.8em;
+    }
+    .section {
+      margin-top: 25px;
+    }
+    .section h2 {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 4px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .badge {
+      background-color: #e0f7fa;
+      padding: 5px 10px;
+      border-radius: 6px;
+      display: inline-block;
+      margin: 2px;
+    }
+    .subsection {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="fiche"></div>
+
+  <script>
+    fetch('datas/Escherichia_coli_fiche_complete.json')
+      .then(response => response.json())
+      .then(data => {
+        const fiche = document.getElementById('fiche');
+
+        fiche.innerHTML = `
+          <h1><i>${data.nom}</i> <span class="tag">Commun</span></h1>
+          <p>${data.description}</p>
+
+          <div class="section">
+            <h2>Classification & Forme</h2>
+            <div class="grid">
+              <div>
+                <p><strong>Famille :</strong> ${data.classification.famille}</p>
+                <p><strong>Genre :</strong> ${data.classification.genre}</p>
+                <p><strong>Espèce :</strong> ${data.classification.espèce}</p>
+              </div>
+              <div>
+                <p><strong>Forme :</strong> ${data.forme}</p>
+                <p><strong>Coloration de Gram :</strong> ${data.gram}</p>
+                <p><strong>Taille :</strong> ${data.taille_microns.longueur} × ${data.taille_microns.largeur}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2>Habitat & Transmission</h2>
+            <div class="grid">
+              <div><strong>Habitat :</strong><ul>${data.habitat.map(x => `<li>${x}</li>`).join('')}</ul></div>
+              <div><strong>Transmission :</strong><ul>${data.transmission.map(x => `<li>${x}</li>`).join('')}</ul></div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2>Conditions de vie</h2>
+            <ul>
+              <li><strong>Température optimale :</strong> ${data.conditions_de_vie.température_optimum}</li>
+              <li><strong>pH :</strong> ${data.conditions_de_vie.pH_optimum}</li>
+              <li><strong>Respiration :</strong> ${data.conditions_de_vie.type_respiratoire}</li>
+              <li><strong>Temps de division :</strong> ${data.reproduction.temps_de_generation}</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h2>Pathogénicité</h2>
+            <ul>
+              ${data.pathogénicité.formes_pathogènes.map(p => `<li>${p}</li>`).join('')}
+            </ul>
+            <p><strong>Mécanismes :</strong> ${data.pathogénicité.mécanismes.join(', ')}</p>
+          </div>
+
+          <div class="section">
+            <h2>Relations microbiennes</h2>
+            <p><strong>Compétiteurs :</strong> ${data.concurrence.compétiteurs.map(c => `<span class="badge">${c}</span>`).join(' ')}</p>
+            <p><strong>Prédateurs :</strong> ${data.concurrence.prédateurs.map(c => `<span class="badge">${c}</span>`).join(' ')}</p>
+            <p><strong>Cibles :</strong> ${data.concurrence.cibles.map(c => `<span class="badge">${c}</span>`).join(' ')}</p>
+          </div>
+
+          <div class="section">
+            <h2>Utilisation en biotechnologie</h2>
+            <ul>
+              ${data.utilisation_biotechnologique.map(u => `<li>${u}</li>`).join('')}
+            </ul>
+          </div>
+        `;
+      });
+  </script>
+</body>
+</html>
