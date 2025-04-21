@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+
+:root {
+  --rarete-commun: #fdd835;
+  --fond: #eef7f1;
+  --texte: #263238;
+  --box-bg: #ffffff;
+  --ombre: rgba(0, 0, 0, 0.1);
+
+  --header-biotope: #4db6ac;
+  --header-danger: #ef5350;
+  --header-utilisation: #81c784;
+  --header-relations: #64b5f6;
+  --header-stats: #9575cd;
+  --header-fun: #ffb74d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+  background: var(--fond);
+  color: var(--texte);
+}
+
+.fiche-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--box-bg);
+  box-shadow: 0 8px 20px var(--ombre);
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: 400px 1fr; /* élargissement de la colonne gauche */
+  gap: 30px;
+}
+
+.fiche-left {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* permet à la stat box de prendre toute la largeur */
+  text-align: center;
+}
+
+.fiche-left img {
+  width: 180px;
+  height: 180px;
+  image-rendering: pixelated;
+  margin: 0 auto;
+}
+
+.fiche-left h1 {
+  margin-top: 10px;
+  font-size: 1.8em;
+}
+
+.badge-rarete {
+  background: var(--rarete-commun);
+  color: #000;
+  padding: 6px 16px;
+  font-weight: bold;
+  border-radius: 20px;
+  margin: 8px auto;
+  font-size: 0.9em;
+  display: inline-block;
+}
+
+.fiche-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  grid-template-areas:
+    "biotope danger"
+    "utilisation funfact"
+    "relations relations";
+}
+
+.fiche-box.biotope { grid-area: biotope; }
+.fiche-box.danger { grid-area: danger; }
+.fiche-box.utilisation { grid-area: utilisation; }
+.fiche-box.relations { grid-area: relations; }
+.fiche-box.funfact { grid-area: funfact; }
+
+.fiche-bottom-left {
+  margin-top: 20px;
+  width: 100%; /* garantit une bonne largeur */
+}
+
+.fiche-box.stats {
+  width: 80%; /* assure que la stat box s'étale sur la largeur disponible */
+  margin: 40px auto 0 auto;
+}
+
+.fiche-box {
+  background: #fefefe;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px var(--ombre);
+  border: 1px solid #ddd;
+}
+
+.fiche-box h2 {
+  margin: 0;
+  padding: 12px 16px;
+  font-size: 1em;
+  font-weight: 600;
+  color: white;
+}
+
+.fiche-box .content {
+  padding: 12px 16px;
+}
+
+.fiche-box ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.relation-card {
+  display: flex;
+  align-items: center;
+  background: #f1f1f1;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.relation-card img {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  image-rendering: pixelated;
+}
+
+.role-label {
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 6px;
+  display: inline-block;
+  margin: 4px 0;
+}
+
+.predator .role-label {
+  background-color: #4db6ac;
+  color: white;
+}
+
+.competitor .role-label {
+  background-color: #42a5f5;
+  color: white;
+}
+
+.target .role-label {
+  background-color: #ffb74d;
+  color: black;
+}
+
+.relation-card.predator { background-color: #e0f7fa; }
+.relation-card.competitor { background-color: #e3f2fd; }
+.relation-card.target { background-color: #fff3e0; }
+
+.fiche-box.biotope h2 { background-color: var(--header-biotope); }
+.fiche-box.danger h2 { background-color: var(--header-danger); }
+.fiche-box.utilisation h2 { background-color: var(--header-utilisation); }
+.fiche-box.relations h2 { background-color: var(--header-relations); }
+.fiche-box.stats h2 { background-color: var(--header-stats); }
+.fiche-box.funfact h2 { background-color: var(--header-fun); }
+
+.stat-line {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+}
+
+.dots {
+  display: flex;
+  gap: 2px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+.dot.filled {
+  background: #4caf50;
+}
